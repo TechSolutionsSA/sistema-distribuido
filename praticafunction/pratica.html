@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adicione os links para o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Functions na pratica</title>
+</head>
+<body>
+  <header>
+    <h1>Functions</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/function/function.html">Functions</a></li>
+      <li class="nav-item"><a class="nav-link" href="/exemplofunction/exfunction.html">Exemplos de Functions em outras linguagens</a></li>
+      <li class="nav-item"><a class="nav-link" href="/praticafunction/pratica.html">Functions na prática</a></li>
+    </ul>
+  </nav>
+
+  <header class="jumbotron">
+    <h1 class="display-4">Functions na prática</h1>
+</header>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <header class="text-center mt-5">
+      <h1>Exemplos Interativos de Functions</h1>
+      <p>Explore e interaja com os exemplos abaixo.</p>
+    </header>
+
+    <!-- Exemplo 1 -->
+    <section id="example1" class="mt-5">
+      <h2>Exemplo 1: Soma de Números</h2>
+      <p>Digite dois números e veja a soma:</p>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="number1">Número 1</label>
+          <input type="number" class="form-control" id="number1" placeholder="Digite o primeiro número">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="number2">Número 2</label>
+          <input type="number" class="form-control" id="number2" placeholder="Digite o segundo número">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="result">Resultado</label>
+          <input type="text" class="form-control" id="result" readonly>
+        </div>
+        <div class="form-group col-md-2 align-self-end">
+          <button class="btn btn-primary" onclick="sumNumbers()">Somar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemplo 2 -->
+    <section id="example2" class="mt-5">
+      <h2>Exemplo 2: Cumprimentar Usuário</h2>
+      <p>Digite seu nome e receba uma saudação personalizada:</p>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="userName">Seu Nome</label>
+          <input type="text" class="form-control" id="userName" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="greeting">Saudação</label>
+          <input type="text" class="form-control" id="greeting" readonly>
+        </div>
+        <div class="form-group col-md-2 align-self-end">
+          <button class="btn btn-primary" onclick="greetUser()">Cumprimentar</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Adicione os links para o Bootstrap JS (opcional, dependendo do uso) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript personalizado -->
+  <script>
+    // Exemplo 1
+    function sumNumbers() {
+      var number1 = parseFloat(document.getElementById('number1').value) || 0;
+      var number2 = parseFloat(document.getElementById('number2').value) || 0;
+      var result = number1 + number2;
+      document.getElementById('result').value = result;
+    }
+
+    // Exemplo 2
+    function greetUser() {
+      var userName = document.getElementById('userName').value;
+      var greeting = 'Olá, ' + (userName || 'Usuário') + '!';
+      document.getElementById('greeting').value = greeting;
+    }
+  </script>
+
+</body>
+</html>

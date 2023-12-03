@@ -1,0 +1,12 @@
+body {
+  padding-top: 56px; /* Altura da barra de navegação fixa */
+}
+.container {
+  margin-top: 50px;
+}
+#movingElement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

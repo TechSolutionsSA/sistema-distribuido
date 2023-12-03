@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adicione os links para o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Functions</title>
+</head>
+<body>
+  <header>
+    <h1>Functions</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="function/function.html">Functions</a></li>
+      <li class="nav-item"><a class="nav-link" href="exemplofunction/exfunction.html">Exemplos de Functions em outras linguagens</a></li>
+      <li class="nav-item"><a class="nav-link" href="/praticafunction/pratica.html">Functions na prática</a></li>
+    </ul>
+  </nav>
+
+    <!-- Conteúdo principal -->
+  <div class="container">
+    <header class="text-center mt-5">
+      <h1>Functions em Javascript</h1>
+      <p>Vamos aprender sobre a importância da Function e os seus tipos</p>
+    </header>
+
+    <!-- Elemento Parado com Nome Autocompletado -->
+    <div id="movingElement" class="alert alert-primary">
+      <p id="name" class="mb-0">Function!</p>
+    </div>
+  </div>
+
+  <!-- Adicione os links para o Bootstrap JS (opcional, dependendo do uso) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript personalizado -->
+  <script>
+    // Função para autocompletar o nome no elemento
+    function autocompleteName() {
+      var nameElement = document.getElementById('name');
+
+      // Autocompletar o nome
+      var names = ["Declaração de Função: \nfunction nomeDaFuncao(parametro1, parametro2) { \n// código da função\nreturn resultado;\n}", 
+                   "Expressão de Função: \nlet multiplicar = function(a, b) { \nreturn a * b;\n};\nconsole.log(multiplicar(4, 5)); // Saída: 20", 
+                  "Arrow Functions: \nlet quadrado = (x) => x * x;\nconsole.log(quadrado(4)); // Saída: 16", 
+                  'Parâmetros de Função: \nfunction saudacao(nome) {\nconsole.log("Olá, " + nome + "!");\n}\nsaudacao("Maria"); // Saída: Olá, Maria!', 
+                  "Escopo de Variáveis: \nfunction exemploEscopo() {\nlet x = 10;\nconsole.log(x);\n}\nexemploEscopo(); // Saída: 10\n//// console.log(x); // Isso resultaria em um erro, pois x não está definido aqui",
+                  'Funções como Objeto: \nlet funcaoObjeto = function() {\nconsole.log("Isso é uma função objeto.");\n};\nfuncaoObjeto(); // Saída: Isso é uma função objeto.'];
+      var index = Math.floor(Math.random() * names.length);
+      nameElement.innerText = names[index];
+    }
+
+    // Configurar a autocompletação com setInterval
+    setInterval(autocompleteName, 3000); // Autocompletar a cada 3 segundos
+  </script>
+</body>
+</html>

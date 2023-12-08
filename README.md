@@ -11,3 +11,5 @@ Alunos Participantes:
 
 Neste repositório se encontram todos os arquivos que compõem a wiki do nosso trabalho sobre functions.
 
+Obrigado!
+
